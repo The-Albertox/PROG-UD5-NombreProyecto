@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class ClasificadorDePalabras {
 
@@ -31,4 +32,7 @@ public class ClasificadorDePalabras {
         return wordsByInitial.getOrDefault(initial, new ArrayList<String>());
     }
     
+    public Set<Character> getInitials() {
+        return wordsByInitial.keySet();
+    }
 }
