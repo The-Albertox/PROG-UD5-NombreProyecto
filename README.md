@@ -1,6 +1,8 @@
-## Getting Started
-
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## 
+ la empresa Duolingo Inc. se ha puesto en contacto con nosotros para
+solicitarnos la elaboración de una aplicación para sus usuarios. El objetivo de este
+programa será que los usuarios puedan tener a su alcance un diccionario en el que
+puedan guardar y revisar las palabras de inglés que van aprendiendo cada día
 
 ## 
 añadi la clase ClasificadorDePalabras 
