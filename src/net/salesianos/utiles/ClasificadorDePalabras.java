@@ -22,17 +22,24 @@ public class ClasificadorDePalabras {
         this.wordsByInitial = wordsByInitial;
     }
     public void addWord(String word) {
-        char initial = word.charAt(0);
+        String sanitizedWord = sanitizeWord(word);
+        char initial = sanitizedWord.charAt(0);
         if (!wordsByInitial.containsKey(initial)) {
             wordsByInitial.put(initial, new ArrayList<String>());
         }
-        wordsByInitial.get(initial).add(word);
+        wordsByInitial.get(initial).add(sanitizedWord);
     }
+
+
+
     public List<String> getWordsByInitial(char initial) {
         return wordsByInitial.getOrDefault(initial, new ArrayList<String>());
     }
     
     public Set<Character> getInitials() {
         return wordsByInitial.keySet();
+    }
+    private String sanitizeWord(String word) {
+        return word.toLowerCase().trim();
     }
 }
