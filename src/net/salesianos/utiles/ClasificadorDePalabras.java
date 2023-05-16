@@ -1,5 +1,6 @@
 package net.salesianos.utiles;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -19,6 +20,15 @@ public class ClasificadorDePalabras {
     public void setWordsByInitial(Map<Character, List<String>> wordsByInitial) {
         this.wordsByInitial = wordsByInitial;
     }
-
+    public void addWord(String word) {
+        char initial = word.charAt(0);
+        if (!wordsByInitial.containsKey(initial)) {
+            wordsByInitial.put(initial, new ArrayList<String>());
+        }
+        wordsByInitial.get(initial).add(word);
+    }
+    public List<String> getWordsByInitial(char initial) {
+        return wordsByInitial.getOrDefault(initial, new ArrayList<String>());
+    }
     
 }
