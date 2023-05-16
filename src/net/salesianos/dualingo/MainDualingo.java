@@ -20,7 +20,7 @@ public static void main(String[] args) {
             System.out.println("5. Ver palabras por inicial");
             System.out.println("6. Cerrar programa");
 
-            int option = scanner.nextInt();
+            int opcion = scanner.nextInt();
             scanner.nextLine();
 }
 }
